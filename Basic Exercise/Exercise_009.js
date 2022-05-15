@@ -4,16 +4,12 @@ Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted 
 
 function longest(s1, s2) {
     // your code
-    let s3 = s1+s2;
     let arr3= [];
     
-    for(val of s3.split("")){
-      if(arr3.includes(val)){
-        
-      }else{
-        arr3.push(val)
-      }
+    for(val of (s1+s2).split("")){
+      if(!arr3.includes(val))arr3.push(val);
     }
-    
     return arr3.sort().join('');
-  }
+}
+    
+// return [...new Set(s1+s2)].sort().join('')
